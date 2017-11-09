@@ -1,1 +1,10 @@
-http://pentode.tistory.com/144 - Spring Security
+-- Spring Security 참고자료
+http://pentode.tistory.com/144 
+
+-- use case 명세서 작성지침( 14 of 29 )
+https://www.slideshare.net/ssuser3979ab20/softwareengeneering3rd
+
+-- 부트스트랩 테마
+https://bootswatch.com/
+https://startbootstrap.com/
+https://www.bootstrapzero.com
