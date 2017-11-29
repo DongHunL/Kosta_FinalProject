@@ -8,3 +8,6 @@ https://www.slideshare.net/ssuser3979ab20/softwareengeneering3rd
 https://bootswatch.com/
 https://startbootstrap.com/
 https://www.bootstrapzero.com
+
+-- body onload VS window.onload
+http://jinolog.com/programming/javascript/2011/03/21/jquery-ready-function.html
