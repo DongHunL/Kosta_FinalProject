@@ -1,0 +1,46 @@
+
+요청(re)
+	re_ninput : 신규입고요청
+	re_npart : 신규수리부속요청
+	re_nother : 신규기타자산입고요청
+
+	re_exinput : 외부수리입고요청
+	
+	re_output : 렌탈출고요청
+	re_exoutput : 외부수리출고요청
+	
+	re_disuse : 폐기요청
+	re_repair : 수리요청
+	re_return : 회수요청
+
+대기(wa)
+	wa_ninput : 등록대기
+	wa_policy : 정책대기
+	wa_product : 영업대기
+	wa_check : 점검대기
+	wa_repair : 수리대기
+
+사용중(do)
+	do_product : 영업중
+	do_disuse : 폐기
+
+buy table 자산보유여부
+	a : 신청
+	b : 보유
+	c : 취소
+	d : 만기
+	
+영업중(vi) - 방문 요청 테이블만 사용
+	As : A/S요청
+	Refund : 회수요청
+
+고객 상태
+	u : 회원(사용중)
+	s : 회원(정지)
+	l : 회원(탈퇴)
+
+직원 상태
+	u : 회원(사용중)
+	o : 회원(출장중)
+	l : 회원(탈사)
+

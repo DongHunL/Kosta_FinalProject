@@ -1,0 +1,131 @@
+-- 임시회원가입
+create sequence temcustomer_seq
+start with 1
+increment by 1
+minvalue 1
+nomaxvalue
+;
+
+-- 회수 ID
+create sequence deprive_seq
+start with 1
+increment by 1
+minvalue 1
+nomaxvalue
+;
+
+-- 상담 ID
+create sequence temadvice_seq
+start with 1
+increment by 1
+minvalue 1
+nomaxvalue
+;
+
+-- 구매 ID
+CREATE SEQUENCE SEQ_BU_ID
+START WITH 1
+INCREMENT BY 1
+NOMAXVALUE 
+NOCYCLE
+NOCACHE;
+
+-- 출고 ID
+create sequence output_seq
+start with 1
+increment by 1
+minvalue 1
+nomaxvalue
+;
+
+--fix sequence--
+create sequence fix_seq
+start with 1
+increment by 1
+minvalue 1
+nomaxvalue
+nocycle;
+
+--item sequence--
+create sequence item_seq
+start with 11
+increment by 1
+minvalue 1
+nomaxvalue
+nocycle;
+
+--visit sequence--
+create sequence visit_seq
+start with 1
+increment by 1
+minvalue 1
+nomaxvalue
+nocycle;
+
+-- 직원 ID
+create sequence empl_seq
+start with 33
+increment by 1
+minvalue 1
+maxvalue 9999
+cycle
+;
+
+--입고ID
+CREATE SEQUENCE SEQ_IN_ID
+START WITH 350
+INCREMENT BY 1
+NOMAXVALUE 
+NOCYCLE
+NOCACHE;
+
+--자산ID
+CREATE SEQUENCE SEQ_PR_ID
+START WITH 1
+INCREMENT BY 1
+NOMAXVALUE 
+NOCYCLE
+NOCACHE;
+
+--품목ID
+CREATE SEQUENCE SEQ_IT_ID
+START WITH 1
+INCREMENT BY 1
+NOMAXVALUE 
+NOCYCLE
+NOCACHE;
+
+--수리ID
+CREATE SEQUENCE SEQ_RE_ID
+START WITH 1
+INCREMENT BY 1
+NOMAXVALUE 
+NOCYCLE
+NOCACHE;
+
+--부품ID
+CREATE SEQUENCE SEQ_PA_ID
+START WITH 1
+INCREMENT BY 1
+NOMAXVALUE 
+NOCYCLE
+NOCACHE;
+
+
+
+
+
+
+
+  drop sequence temcustomer_seq;
+  drop sequence deprive_seq;
+  drop sequence temadvice_seq;
+  drop sequence seq_bu_id;
+  drop sequence output_seq;
+  drop sequence fix_seq;
+  drop sequence item_seq;
+  drop sequence visit_seq;
+  drop sequence seq_in_id;
+  drop sequence seq_pr_id;
+  drop sequence seq_it_id;
+  drop sequence seq_re_id;

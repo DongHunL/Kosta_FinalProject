@@ -1012,3 +1012,166 @@ COMMENT ON COLUMN ADVICE_DETAIL.AD_SORT IS '상담을 구분하기 위한 코드';
 
 -- 상담내용
 COMMENT ON COLUMN ADVICE_DETAIL.AD_CONTENT IS '상담의 내용';
+
+
+
+
+-- 품목 테이블
+-- insert into ITEM values('품목id', '품목명', '품목코드',  렌트표준단가(월간), 자산취득표준가, 기본대여기간, '제조사', '품목설명', '이미지주소');
+insert into ITEM values('IT0000000001', '쿠쿠 냉온정수기렌탈', 'CP-BN601HW', 27900, 3600000, 36, 'cuckoo', '제품형태 : 하프\n\r제품색상 : 화이트\n\r필터방식 : 나노필터\n\r제품종류 : 냉온정수기', 'PR0000000001_CP-BN601HW.png');
+insert into ITEM values('IT0000000002', '쿠쿠 직수형살균 냉온정수기렌탈', 'CP-LS011B', 34900, 4000000, 36, 'cuckoo', '제품형태 : 하프\n\r제품색상 : 화이트\n\r필터방식 : 나노필터\n\r제품종류 : 냉온정수기', 'PR0000000002_CP-LS011B.png');
+insert into ITEM values('IT0000000003', '쿠쿠 직수형살균 냉온정수기렌탈', 'CP-JS011B', 29900, 3700000, 36, 'cuckoo', '제품형태 : 하프\n\r제품색상 : 골드\n\r필터방식 : 나노필터\n\r제품종류 : 냉온정수기', 'PR0000000003_CP-JS011B.png');
+insert into ITEM values('IT0000000004', '쿠쿠 직수형살균 정수기렌탈', 'CP-M011B', 20900, 3200000, 36, 'cuckoo', '제품형태 : 하프\n\r제품색상 : 블랙\n\r필터방식 : 나노필터\n\r제품종류 : 일반정수기', 'PR0000000004_CP-M011B.png');
+insert into ITEM values('IT0000000005', '쿠쿠 냉온정수기렌탈', 'CP-K501HW', 21900, 3300000, 36, 'cuckoo', '제품형태 : 하프\n\r제품색상 : 화이트\n\r필터방식 : 나노필터\n\r제품종류 : 냉온정수기', 'PR0000000005_CP-K501HW.png');
+
+
+-- 고객 테이블
+-- insert into CUSTOMER values('고객아이디', '비밀번호', '성명', '생년월일', '휴대전화', '우편', '주소', '상세주소', '카드사', '카드번호', '은행', '계좌번호', '가입일', '상태', '변경일');
+insert into CUSTOMER values('kjl1043@hanmail.net', 'leedhun9393', '김재림', '1970-01-02', '010-2244-5557', '11521', '경기 양주시 장흥면 가마골로 19-77 (부곡리)', '5507부대', '우리카드', '1245777788884444', '우리은행', '100-12574-12565', '2017-12-08', 'u', '2017-12-08');
+insert into CUSTOMER values('leedhun9393@naver.com', 'leedhun9393', '이동훈', '1993-09-17', '010-2541-5872', '52438', '경남 남해군 이동면 미국마을길 5 (용소리)', 'XX아파트 409동 2000호',  '삼성카드', '1245777788884444', '국민은행', '1011-2455-1156812', '2017-12-08', 'u', '2017-12-08');
+insert into CUSTOMER values('ohyes0204@naver.com', 'leedhun9393', '이민정', '1980-11-02', '010-6523-2348', '24104', '강원 화천군 상서면 다목1길 7 (다목리)', '27사단 259포병대대 6377부대', '신한카드', '1245777788884444', '씨티은행', '874512-1554-4577', '2017-12-08', 'u', '2017-12-08');
+insert into CUSTOMER values('leewonho93@naver.com', 'leedhun9393', '이원호', '2000-08-08', '010-9852-1258', '42957', '대구 달성군 화원읍 류목정길 5 (설화리)', 'XX아파트 105동 504호',  '비씨카드', '1245777788884444', '외환은행', '10-021115-54477', '2017-12-08', 'u', '2017-12-08');
+
+
+-- 직원 테이블
+-- insert into EMPLOYEE values('직원아이디', '비밀번호', '성명', '휴대전화', '근무지', '입사일', '권한id', '유저상태', '변경일');
+insert into EMPLOYEE values('20170001', '20170001', '이동훈', '010-8523-9852', '강원 화천군 상서면 다목1길 7 (다목리)', '2017-12-08', '1', 'u', '2017-12-08');
+insert into EMPLOYEE values('20170002', '20170002', '김재림', '010-2542-6452', '강원 화천군 상서면 다목1길 7 (다목리)', '2017-12-08', '2', 'u', '2017-12-08');
+insert into EMPLOYEE values('20170003', '20170003', '이민정', '010-6552-1225', '강원 화천군 상서면 다목1길 7 (다목리)', '2017-12-08', '3', 'u', '2017-12-08');
+insert into EMPLOYEE values('20170004', '20170004', '이원호', '010-1515-1515', '강원 화천군 상서면 다목1길 7 (다목리)', '2017-12-08', '4', 'u', '2017-12-08');
+
+
+-- 자산 테이블
+-- insert into PRODUCT values('자산id', '구매id', '품목ID', '품목명', '최초입고일자', '입고일자', '출고일자', '출고대상', '지역', '요규사항', '자산상태', '수량', 'QR코드');
+insert into PRODUCT values('PR0000000001', '', 'IT0000000001', '쿠쿠 냉온정수기렌탈', to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), '', '', '', 'wa_product', 10, 'PR0000000001_QR.png');
+insert into PRODUCT values('PR0000000002', '', 'IT0000000002', '쿠쿠 직수형살균 냉온정수기렌탈', to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), '', '', '', 'wa_state', 10, 'PR0000000002_QR.png');
+insert into PRODUCT values('PR0000000003', 'BU0000000004', 'IT0000000003', '쿠쿠 직수형살균 냉온정수기렌탈', to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), '이민정', '', '', 're_return', 40, 'PR0000000003_QR.png');
+insert into PRODUCT values('PR0000000004', '', 'IT0000000004', '쿠쿠 직수형살균 정수기렌탈', to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), '', '', '', 'wa_product', 10, 'PR0000000004_QR.png');
+insert into PRODUCT values('PR0000000005', 'BU0000000005', 'IT0000000005', '쿠쿠 냉온정수기렌탈', to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), 'leedhun9393@naver.com', '', '', 're_return', 10, 'PR0000000005_QR.png');
+insert into product values('PR0000000008', '','','',to_date('2017-12-0821:56', 'yyyy-mm-ddhh24:mi'),'','','','','','wa_state','','');
+
+
+-- 권한 테이블
+-- insert into AUTHORITY values('권한id','권한명','권한설명');
+insert into AUTHORITY values('1','관리자','시스템 관리 및 설정');
+insert into AUTHORITY values('2','내부수리기사','회사 내부에서 수리와 관련된 업무 처리');
+insert into AUTHORITY values('3','외부수리기사','회사 외부에서 수리와 관련된 업무 처리');
+insert into AUTHORITY values('4','입고관리자','물품입고와 관련된 업무 처리');
+insert into AUTHORITY values('5','출고관리자','물품출고와 관련된 업무 처리');
+insert into AUTHORITY values('6','상담사','상담과 관련된 업무 처리');
+insert into AUTHORITY values('7','자산관리자','자산과 관련된 업무 처리');
+insert into AUTHORITY values('8','영업관리자','통계와 관련된 업무 처리');
+
+
+-- 상담 테이블
+-- insert into ADVICE values('상담id','상담일자','직원아이디');
+insert into ADVICE values('ad0000000001',to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'),'20170003');
+insert into ADVICE values('ad0000000002',to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'),'20170003');
+insert into ADVICE values('ad0000000003',to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'),'20170003');
+insert into ADVICE values('ad0000000004',to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'),'20170003');
+insert into ADVICE values('ad0000000005',to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'),'20170003');
+
+
+-- 상담 세부 테이블
+-- insert into ADVICE_DETAIL values('상담id','구매ID','상담구분', '상담내용');
+insert into ADVICE_DETAIL values('ad0000000001','BU0000000002', 'a','물 맛이 이상해요.');
+insert into ADVICE_DETAIL values('ad0000000002','BU0000000002', 'a','물 맛이 너무 이상해요.');
+insert into ADVICE_DETAIL values('ad0000000003','BU0000000002', 'a','물 맛이 엄청 이상해요.');
+insert into ADVICE_DETAIL values('ad0000000004','BU0000000004', 'd','환불 해줘요.');
+insert into ADVICE_DETAIL values('ad0000000005','BU0000000005', 'd','기간이 다 되가네요.');
+
+
+-- 부품 테이블
+-- insert into PARTS values('부품ID','모델명','검색명', '품목ID', '제조사', 총재고량, 안전재고량);
+insert into PARTS values('PA0000000001','L피팅','피팅', 'IT0000000001', '세진아쿠아', 100, 30);
+insert into PARTS values('PA0000000002','I피팅','피팅', 'IT0000000002', '세진아쿠아', 70, 20);
+insert into PARTS values('PA0000000003','T피팅','피팅', 'IT0000000003', '세진아쿠아', 100, 30);
+insert into PARTS values('PA0000000004','소형아답터 A형','소형아답터', 'IT0000000004', '세진아쿠아', 60, 15);
+insert into PARTS values('PA0000000005','중형아답터 A형','중형아답터', 'IT0000000005', '세진아쿠아', 50, 40);
+
+
+
+-- 외부수리기사 회수결과 테이블
+-- insert into DEPRIVE values('외부회수id', '방문요청id', '방문일', '고객아이디', '고객명', '자산id', '자산상태', '수리기사id', '수리기사명', '회수결과내역');
+insert into DEPRIVE values('de0000000001', 'vi0000000003', to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), 'ohyes0204@naver.com', '이민정', 'PR0000000002', 're_return', '20170001', '이동훈', '고객 불 만족으로 인한 회수');
+insert into DEPRIVE values('de0000000002', 'vi0000000004', to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), 'ohyes0204@naver.com', '이민정', 'PR0000000003', 're_return', '20170001', '이동훈', '동훈이가 고장내서 회수');
+insert into DEPRIVE values('de0000000003', 'vi0000000005', to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), 'leedhun9393@naver.com', '이동훈', 'PR0000000005', 're_return', '20170001', '이동훈', '기간 만료로 인한 회수');
+
+
+-- 구매정보 테이블
+-- insert into BUY values('구매ID','구매일','고객ID','직원ID','품목ID',구매단가,수량,'렌탈시작일','렌탈종료일','우편번호','주소','상세주소','결제방식','매월납','카드사','카드번호','은행','이체계좌','수납계좌','총결제금액','누적결제금액','미수금액','환불여부','자산보유여부');
+insert into BUY values('BU0000000001',to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'),'kjl1043@hanmail.net','20170001','PR0000000001',27900,20,'2014-11-08','2017-11-08','11521','경기 양주시 장흥면 가마골로 19-77 (부곡리)','5507부대','money','매월납','','','','','110-1254-852214','3600000','3600000','0','N','N');
+insert into BUY values('BU0000000002',to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'),'kjl1043@hanmail.net','20170001','PR0000000002',34900,20,'2014-11-13','2017-11-13','11521','경기 양주시 장흥면 가마골로 19-77 (부곡리)','5507부대','money','매월납','','','','','110-1254-852214','4000000','4000000','0','N','N');
+insert into BUY values('BU0000000003',to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'),'ohyes0204@naver.com','20170001','PR0000000003',29900,40,'2014-12-08','2017-12-08','52438','경남 남해군 이동면 미국마을길 5 (용소리)','XX아파트 409동 2000호','card','매월납','삼성카드','1245777788884444','','','110-1254-852214',3700000,'3400000','300000','Y','N');
+insert into BUY values('BU0000000004',to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'),'leewonho93@naver.com','20170001','PR0000000004',20900,20,'2014-11-15','2017-11-15','42957','대구 달성군 화원읍 류목정길 5 (설화리)','XX아파트 105동 504호','account','매월납','','','외환은행','10-021115-54477','110-1254-852214','3200000','3200000','0','N','N');
+insert into BUY values('BU0000000005',to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'),'leedhun9393@naver.com','20170001','PR0000000005',21900,10,'2014-12-08','2017-12-08','24104','강원 화천군 상서면 다목1길 7 (다목리)','27사단 259포병대대 6377부대','card','매월납','신한카드','1245777788884444','','','110-1254-852214',3300000,'3300000','0','N','N');
+
+
+-- 사용 부품 테이블
+-- insert into USE_PARTS values('점검결과ID', '부품ID', '수량');
+insert into USE_PARTS values('RE0000000001', 'PA0000000001', 2);
+insert into USE_PARTS values('RE0000000001', 'PA0000000002', 1);
+insert into USE_PARTS values('RE0000000001', 'PA0000000003', 2);
+insert into USE_PARTS values('RE0000000002', 'PA0000000001', 5);
+insert into USE_PARTS values('RE0000000002', 'PA0000000003', 2);
+insert into USE_PARTS values('RE0000000002', 'PA0000000005', 3);
+
+--dong
+
+
+-- 입고요청처리
+-- insert into input values('입고ID', '자산ID', '품목ID', 수량, '자산상태', '요청일자', '인계자', '입고일자', '입고완료여부');
+insert into input values('IN0000000001', 'PR0000000008', 'IT0000000001', 20, 're_ninput', systimestamp, '이원호', to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), 'N');
+insert into input values('IN0000000002', 'PR0000000009', 'IT0000000002', 30, 're_ninput', systimestamp, '김재림', to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), 'N');
+insert into input values('IN0000000003', 'PR0000000003', 'IT0000000002', 40, 're_return', systimestamp, '이민정', to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), 'N');
+insert into input values('IN0000000004', 'PR0000000005', 'IT0000000004', 10, 're_return', systimestamp, '이동훈', to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), 'N');
+insert into input values('IN0000000005', 'PR0000000008', '', 10, 're_ninput', systimestamp, '이동훈', to_date('2017-12-0816:49', 'yyyy-mm-ddhh24:mi'), 'N');
+
+-- 출고요청처리
+-- insert into output values('출고ID', '자산ID', '품목ID', '자산상태', '요청일자', 출고수량, '인수자', '출고일자', '출고완료여부');
+insert into output values('ou0000000001', 'PR0000000007', 'IT0000000001', 're_output', to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), 10, '이원호', to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), 'N');
+insert into output values('ou0000000002', 'PR0000000008', 'IT0000000002', 're_output', to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), 10, '이민정', to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), 'N');
+insert into output values('ou0000000003', 'PR0000000009', 'IT0000000001', 're_exoutput', to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), 10, '이동훈', to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), 'N');
+insert into output values('ou0000000004', 'PR0000000010', 'IT0000000004', 're_exoutput', to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), 10, '김재림', to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), 'N');
+
+-- 방문요청테이블
+-- insert into visit values('방문요청ID', '구매ID', '품목ID', '고객이름', '방문일자', '전화번호', '방문지_우편번호', '방문지_주소', '방문지_상세주소', '요청코드', '고객아이디', '직원아이디', '완료여부');
+insert into visit values('vi0000000001', 'BU0000000001', 'IT0000000001', '이원호',  to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), '010-2582-4564', '76541', '강원도 화천군 상서면 다목1길 7 (다목리)', '27사단 259포병대대 6377부대', 'As', 'leewonho93@naver.com', '20170001', 'N');
+insert into visit values('vi0000000002', 'BU0000000002', 'IT0000000002', '김재림',  to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), '010-2582-4564', '76541', '경기 양주시 장흥면 가마골로 19-77 (부곡리) ', '5507부대', 'Refund', 'leedhun9393@naver.com', '20170001', 'N');
+insert into visit values('vi0000000003', 'BU0000000003', 'IT0000000003', '이동훈',  to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), '010-2582-4564', '76541', '대구 달성군 화원읍 류목정길 5 (설화리)', 'XX아파트 105동 504호', 'Refund', 'kil1043@hanmail.net', '20170001', 'N');
+insert into visit values('vi0000000004', 'BU0000000004', 'IT0000000004', '이민정',  to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), '010-2582-4564', '76541', '경남 남해군 이동면 미국마을길 5 (용소리)', 'XX아파트 409동 2000호', 'As', 'ohyes0204@naver.com', '20170001', 'N');
+insert into visit values('vi0000000005', 'BU0000000005', 'IT0000000005', '이동훈',  to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), '010-2582-4564', '76541', '경기도 안양시 안양일번가', '코인노래방', 'Refund', 'ohyes0204@naver.com', '20170001', 'N');
+
+-- 실사계획
+-- insert into examination values('실사번호', '시작기간', '종료기간', '비고');
+insert into examination values('1', '2017-12-08', '2017-12-09', '정기실사');
+insert into examination values('2', '2017-12-09', '2017-12-10', '불시실사');
+insert into examination values('3', '2017-12-08', '2017-12-09', '정기실사');
+insert into examination values('4', '2017-12-08', '2017-12-09', '정기실사');
+insert into examination values('5', '2017-12-08', '2017-12-09', '자산 손망으로 인한 실사');
+
+-- 실사결과
+-- insert into exam_result('실사번호', '품목ID', '자산ID', '실사일자', '자산상태');
+insert into exam_result values('1', 'IT0000000002', 'PR0000000002', '2017-12-08', '이상없음');
+insert into exam_result values('1', 'IT0000000003', 'PR0000000003', '2017-12-08', '로스');
+insert into exam_result values('2', 'IT0000000001', 'PR0000000001', '2017-12-08', '이상없음');
+insert into exam_result values('2', 'IT0000000004', 'PR0000000004', '2017-12-08', '이상없음');
+insert into exam_result values('5', 'IT0000000005', 'PR0000000005', '2017-12-08', '이상없음');
+
+-- 외부수리기사 as결과 등록
+-- insert into fix values('외부asID', '방문요청ID', '방문일', '고객아이디', '고객명', '자산ID', '자산상태', '수리기사ID', '수리기사명', 'as분류', 'as결과내역');
+insert into fix values('fi0000000001', 'vi0000000001',to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), 'leewonho93@naver.com', '이원호짱짱', 'PR0000000001', 'do_product', '20170001', '이동훈', '일반수리', '소모품교체');
+insert into fix values('fi0000000002', 'vi0000000002',to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), 'leewonho93@naver.com', '이원호불호', 'PR0000000002', 're_return', '20170001', '이동훈', '기능수리', '메인부품 노화로 인한 사내수리');
+
+
+-- 내부수리기사 점검결과등록
+-- insert into repair values('점검결과ID', '품목명', '자산ID', '수리기사ID', '수리기사명', '점검분류', '자산상태', '수리일자', '점검내역');
+insert into repair values('RE0000000001', '쿠쿠 냉온정수기렌탈', 'PR0000000001', '20170002', '김재림', 'wa_product', 'wa_product', to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), '점검완료');
+insert into repair values('RE0000000002', '쿠쿠 직수형살균 냉온정수기렌탈', 'PR0000000002', '20170002', '김재림', 'wa_product', 'wa_product', to_date('2017-12-0817:09', 'yyyy-mm-ddhh24:mi'), '점검완료');
+
+commit;
+
+purge recyclebin;
+
+commit;
+
